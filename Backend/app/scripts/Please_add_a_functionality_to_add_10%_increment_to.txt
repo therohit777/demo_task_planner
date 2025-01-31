@@ -1,0 +1,35 @@
+Here's a structured plan to accomplish this:
+
+Step 1: Identify the Correct Class
+In your codebase, there exists an `Employee` class. As the requirement is about modifying attributes related to an employee, this is where we should be making our modifications.
+
+Step 2: Add a New Method
+Inside the `Employee` class, add a new method, let's call it `increment_salary`. This function should accept no arguments (besides `self`) and will be responsible for increasing the employee's salary by 10%.
+
+The function might look something like this:
+
+```python
+def increment_salary(self):
+    self.salary += self.salary * 0.1
+```
+
+In this function, we're assuming that `salary` is a property of the `Employee` class. If it is not, you will need to modify the code accordingly.
+
+Step 3: Create a Function to Iterate Over All Employees
+In the `EmployeeManagementSystem` class, we need to add a function that will iterate over each employee and call the `increment_salary` function we created in step 2 on each one.
+
+This function might look like this:
+
+```python
+def increment_all_salaries(self):
+    for emp in self.employees:
+        emp.increment_salary()
+```
+
+In this `increment_all_salaries` function, we are assuming that `self.employees` is a list of all Employee objects. If your data structure differs, you will need to adapt accordingly.
+
+Step 4: Test the Code
+Once these changes are made, you will need to thoroughly test your code to make sure that the salary increment is working correctly. Create several employees with known salaries, use the `increment_all_salaries` function, and check that the salaries increase as expected.
+
+Step 5: Assess the Frequency of Increment
+The user requested that the increase in salary should happen every year. You will need to decide when and how you're going to call the `increment_all_salaries` function. One approach could be creating a separate function that waits until it's time to increment the salaries again (most likely using a time delay of some kind). The implementation of this will largely depend on the rest of your codebase and application design.

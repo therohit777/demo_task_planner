@@ -1,0 +1,35 @@
+Here's a step-by-step plan to add a function in the codebase which would increment the salary of employees by 10%:
+
+1. Identify the Relevant Class: In this case, the class where the modification should be made is `Employee`. This is because it's reasonable to assume that this class contains the salary attribute for each employee, based on typical object-oriented programming design principles.
+
+2. Add a Function to the Employee Class: Add a new method to the `Employee` class that will increment the salary of a particular employee instance. Let's call this function `increase_salary`.
+
+Here's a sample syntax:
+
+```python
+class Employee:
+  # existing code...
+
+  def increase_salary(self):
+    self.salary += self.salary * 0.1
+```
+
+In this function, 'self.salary' is the employee's current salary. The increment is done by 10% (0.1 in decimal form) of the current salary. The result is added to the current salary which is then assigned to 'self.salary' (the updated salary).
+
+3. Adjust Employee Management System: If the user wants to increase salary for all employees, an additional method need to be added to the `EmployeeManagementSystem` class. This method should iterate over all `Employee` objects and call their `increase_salary` method.
+
+Here's a sample syntax:
+
+```python
+class EmployeeManagementSystem:
+  # existing code...
+
+  def increment_all_salaries(self):
+    for employee in self.employees:
+      employee.increase_salary()
+```
+In the context of the `EmployeeManagementSystem` class, 'self.employees' would be a list storing all current employees. The for-loop goes through each employee in this list and calls the 'increase_salary' method of `Employee` class to update each employee's salary.
+
+4. Testing: Finally, test the new functionality to ensure it's working correctly. Add new employees or use existing ones to test the increment of their salaries.
+
+Note: This plan assumes that the `Employee` has a 'salary' attribute and `EmployeeManagementSystem` has a list of all the employees. If not, additional steps may be needed to introduce these aspects to the codebase.

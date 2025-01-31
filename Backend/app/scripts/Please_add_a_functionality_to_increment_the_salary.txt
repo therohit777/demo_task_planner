@@ -1,0 +1,17 @@
+1. First, identify the appropriate class to add the functionality. In this case, it appears that the "Employee" class would be most suitable, as it's likely that this class contains attributes about the employee, including their salary.
+
+2. Within the "Employee" class, define a new method. This could be called "increment_salary". This function should not have any arguments except for the "self" keyword, which refers to the instance of the class.
+
+3. Within this "increment_salary" method, you will need to access the current employee's salary. Assuming there is an instance variable like "self.salary" that holds this information, you could access it with: current_salary = self.salary
+
+4. To perform the 10% increase, create a new variable "new_salary" and set it equal to current_salary * 1.1 (where 1.1 is equivalent to a 10% increase).
+
+5. Update the employee's salary with the new value: self.salary = new_salary. This will overwrite the original salary with the increased amount.
+
+6. Once this functionality is added to the "Employee" class, we also need to add a functionality in the "EmployeeManagementSystem" class to apply this new salary increment to all employees once every year.
+
+7. In the "EmployeeManagementSystem" class, introduce a new method, perhaps named "annual_salary_increment". This method will loop through every "Employee" instance in the system and call the "increment_salary" method.
+
+8. For the annual increment to be automatic, you will need to import a date or time library to keep track of the passage of a year. Alternatively, if there is a program routine that's executed yearly, you could simply add a call to this "annual_salary_increment" method there.
+
+Note: Be sure to test your new functionality thoroughly. Make sure salaries are increasing correctly and only once per year.

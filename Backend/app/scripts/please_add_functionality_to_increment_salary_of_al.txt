@@ -1,0 +1,40 @@
+Here is a step-by-step plan to add the functionality to increment the salary of all employees by 10% every year:
+
+Step 1: Update the Employee class 
+Add a new method named `increment_salary` in the Employee class that will increment the salary by 10%. 
+
+```python
+class Employee:
+  ...
+
+  def increment_salary(self):
+    self.salary += self.salary * 0.10
+```
+In this code, `self.salary` is an assumed attribute of Employee class that holds the salary info of an employee. The `increment_salary` method just increases this salary by 10%.
+
+Step 2: Updating the EmployeeManagementSystem class
+Update the EmployeeManagementSystem class to include a method that increments the salary of all employees. This method should call the `increment_salary` method for each employee. 
+
+```python
+class EmployeeManagementSystem:
+  ...
+
+  def increment_all_employee_salaries(self):
+    for employee in self.employees: 
+      employee.increment_salary()
+```
+In the above code, `self.employees` is assumed to be a list that holds all Employee objects. The `increment_all_employee_salaries` function iterates over each employee and calls the `increment_salary` method on them.
+
+Step 3: Call the new function
+Somewhere in your code, call the `increment_all_employee_salaries` method on the instance of EmployeeManagementSystem class. 
+
+```python
+ems = EmployeeManagementSystem()
+...
+ems.increment_all_employee_salaries()
+```
+After these steps, the code will increment the salary of all employees by 10% when the `increment_all_employee_salaries` method is called on an instance of EmployeeManagementSystem. 
+
+Note: The assumption made for this plan is that `EmployeeManagementSystem` has a list of `Employee` objects and `Employee` class has a salary attribute. If this is not the case, then create the necessary data members in the classes.
+
+Remember to test your code thoroughly to ensure that it works as expected.
