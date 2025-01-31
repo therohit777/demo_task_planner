@@ -4,7 +4,7 @@
 Task Planner is a tool that generates an action plan to modify or refactor changes in a codebase. Currently, it supports Python codebases but can be extended to support additional languages in the future.
 
 ---
-![Task Planner Application](https://drive.google.com/file/d/1KSRJFMprAB5wInxAWg7cbqG76VNifzJf/view?usp=sharing)
+![Task Planner Application](https://res.cloudinary.com/duqsn3not/image/upload/v1738360795/lwh9mi492jmkijxfngy3.png)
 
 ## Setup and Running Instructions
 
